@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ニコニコバトルゲーム v2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>ニコニコバトルゲーム v2</h1>
+
+  <div id="user-input-area">
+    <label>公開されているマイリストID：</label>
+    <input type="text" id="mylist-id-input" placeholder="例: 12345678">
+    <button id="fetch-button">ゲーム開始</button>
+  </div>
+
+  <div id="choice-message"></div>
+  <div id="choice-area"></div>
+  <button id="start-button" disabled>バトル開始！</button>
+
+  <div id="hero-status-area"></div> <!-- 主人公ステータスエリア -->
+
+  <div id="enemy-list-area"></div> <!-- 控え敵リスト -->
+  <div id="battle-area"></div>      <!-- バトルフィールド -->
+  <div id="status-area"></div>      <!-- ターン/回戦 -->
+
+  <!-- 効果音読み込み -->
+  <audio id="explosion-sound" src="assets/sounds/explosion.mp3" preload="auto"></audio>
+  <audio id="critical-sound" src="assets/sounds/critical.mp3" preload="auto"></audio>
+
+  <script src="game.js"></script>
+</body>
+</html>
