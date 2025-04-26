@@ -10,7 +10,7 @@ const criticalSound = new Audio('assets/sounds/critical.mp3');
 
 // マイリストIDから動画基本情報（ID・タイトル・サムネURL）取得
 async function fetchMylistVideos(mylistId) {
-  const response = await fetch(`/api/mylist/${mylistId}`);
+  const response = await fetch(`/api/mylist?mylistId=${mylistId}`);
   const text = await response.text();
   const parser = new DOMParser();
   const xml = parser.parseFromString(text, "application/xml");
@@ -42,7 +42,7 @@ async function fetchMylistVideos(mylistId) {
 
 // 動画IDからステータス取得
 async function fetchVideoStats(videoId) {
-  const response = await fetch(`/api/getthumbinfo/${videoId}`);
+  const response = await fetch(`/api/getthumbinfo?videoId=${videoId}`);
   const text = await response.text();
   const parser = new DOMParser();
   const xml = parser.parseFromString(text, "application/xml");
