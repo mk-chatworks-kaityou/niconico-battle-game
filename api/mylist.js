@@ -1,6 +1,5 @@
 import fetch from 'node-fetch';
 
-
 export default async function handler(req, res) {
   const { mylistId } = req.query;
 
@@ -10,6 +9,7 @@ export default async function handler(req, res) {
     res.setHeader('Content-Type', 'application/xml');
     res.status(200).send(text);
   } catch (error) {
+    console.error(error); // ★エラーも出しておくと良い
     res.status(500).json({ error: 'Failed to fetch mylist info' });
   }
 }
