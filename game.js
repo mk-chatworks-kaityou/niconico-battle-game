@@ -213,4 +213,4 @@ async function startGame() {
   }
 }
 
-document.getElementById('start-button').onclick = startGame;
+document.getElementById('fetch-button').onclick = startGame;
