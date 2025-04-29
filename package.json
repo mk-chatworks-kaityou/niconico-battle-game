@@ -1,11 +1,19 @@
 {
   "name": "niconico-battle-game",
   "version": "1.0.0",
-  "engines": {
-    "node": "18.x"
+  "main": "game.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "node-fetch": "^3.3.2"
-  }
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "node-fetch": "^2.7.0"
+  },
+  "devDependencies": {},
+  "description": ""
 }

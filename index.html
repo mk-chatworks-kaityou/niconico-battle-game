@@ -2,31 +2,40 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>ニコニコバトルゲーム v2</title>
+  <title>ニコニコバトルゲーム v4</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>ニコニコバトルゲーム v2</h1>
+  <h1>ニコニコバトルゲーム v4</h1>
+  <p class="catch-copy">マイリストから最強の動画でバトルしよう！</p>
 
-  <div id="user-input-area">
-    <label>公開されているマイリストID：</label>
+  <div class="start-form">
+    <label for="mylist-id-input">公開されているマイリストID：</label>
     <input type="text" id="mylist-id-input" placeholder="例: 12345678">
     <button id="fetch-button">ゲーム開始</button>
   </div>
 
-  <div id="choice-message"></div>
-  <div id="choice-area"></div>
   <button id="start-button" disabled>バトル開始！</button>
 
-  <div id="hero-status-area"></div> <!-- 主人公ステータスエリア -->
+  <div id="choice-message"></div>
+  <div id="choice-area"></div>
 
+  <div id="hero-status-area"></div> <!-- 主人公ステータスエリア -->
   <div id="enemy-list-area"></div> <!-- 控え敵リスト -->
-  <div id="battle-area"></div>      <!-- バトルフィールド -->
-  <div id="status-area"></div>      <!-- ターン/回戦 -->
+
+  <div id="battle-area">
+    <!-- バトル中の表示とかメッセージここに出す -->
+    <div id="retry-button" style="display:none;">もう一回やる！</div>
+  </div>
+
+  <div id="status-area"></div> <!-- ターン/回戦 -->
 
   <!-- 効果音読み込み -->
   <audio id="explosion-sound" src="assets/sounds/explosion.mp3" preload="auto"></audio>
   <audio id="critical-sound" src="assets/sounds/critical.mp3" preload="auto"></audio>
+  <audio id="fanfare-sound" src="assets/sounds/fanfare.mp3" preload="auto"></audio>
+  <audio id="gameover-sound" src="assets/sounds/gameover.wav" preload="auto"></audio>
+  <audio id="battle-start-sound" src="assets/sounds/battle_start.mp3" preload="auto"></audio>
 
   <script src="game.js"></script>
 </body>
